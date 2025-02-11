@@ -2,137 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Student Portfolio</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        .page {
-            display: none;
-            height: 100vh;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 20px;
-        }
-        #home {
-            display: flex;
-            background-image: url('https://www.iamag.co/wp-content/uploads/2017/07/cover-yourname.jpg'); /* Change to your image */
-            background-size: cover;
-            background-position: center;
-            color: white;
-            font-size: 30px;
-        }
-        #about {
-            background: linear-gradient(to right, red, yellow, black);
-            color: white;
-        }
-        #profile, #achievements, #courseprogress {
-            background-color: #f4f4f4;
-            color: black;
-        }
-        img {
-            width: 200px;
-            height: 250px;
-            border-radius: 10px;
-            object-fit: cover;
-        }
-        h1 {
-            font-size: 36px;
-            margin: 10px 0;
-        }
-        h2 {
-            font-size: 20px;
-            margin: 5px 0;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            margin: 5px 0;
-            font-size: 18px;
-        }
-        .nav {
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .nav button {
-            padding: 10px 20px;
-            margin: 5px;
-            cursor: pointer;
-            border: none;
-            background-color: black;
-            color: white;
-            font-size: 16px;
-        }
-    </style>
+    <!-- Font Awesome 5 -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive Navbar</title>
 </head>
 <body>
-
-    <div class="nav">
-        <button onclick="showPage('home')">Home</button>
-        <button onclick="showPage('about')">About Me</button>
-        <button onclick="showPage('profile')">Profile</button>
-        <button onclick="showPage('courseprogress')">Course Progress</button>
-        <button onclick="showPage('achievements')">Achievements</button>
-    </div>
-
-    <div id="home" class="page" style="display: flex;">
-        <h1 style="font-family: 'Courier New', monospace;">Information Technology Student Portfolio</h1>
-    </div>
-
-    <div id="about" class="page">
-        <h1>About Me</h1>
-        <p>Hello! I am JP Ferrer a Grade 12-Stem SHS Student, interested in learning about coding and technology.</p>
-        <p>I love creating projects.</p>
-        <p>My goal is to become a skilled Data Scientist in the future.</p>
-    </div>
-
-    <div id="profile" class="page">
-        <img src="your-profile.jpg" alt="Your Profile Picture">
-        <h1><strong>Profile</strong></h1>
-        <h2>Full Name: JP Ferrer </h2>
-        <h2>Email: jbdferrer@mymail.mapua.edu.ph</h2>
-        <h2>Degree/Program: Grade 12-STEM y</h2>
-        <h2>School: Mapua University </h2>
-    </div>
-    
-    <div id="courseprogress" class="page">
-        <img src="your-profile.jpg" alt="Your Profile Picture">
-        <h1><strong>Course Progress</strong></h1>
-        <h2>Full Name: JP Ferrer </h2>
-        <h2>Email: jbdferrer@mymail.mapua.edu.ph</h2>
-        <h2>Degree/Program: Grade 12-STEM y</h2>
-        <h2>School: Mapua University </h2>
-    </div>
-
-    <div id="achievements" class="page">
-        <h1><strong>Achievements</strong></h1>
-        <img src="your-achievement-photo.jpg" alt="Your Achievement Photo">
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="check-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">DesignX</label>
         <ul>
-            <li>🏆 With Honors A.Y. 2019-2022</li>
-            <li>🎓 BEst in English</li>
-            <li>💻 Completed a Data Science Internship</li>
-            <li>📝 Published a Research Paper on The Effect of Screentime On The Academic Performance of Students</li>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Feedback</a></li>
         </ul>
-    </div>
-
-    <script>
-        function showPage(page) {
-            let pages = document.getElementsByClassName('page');
-            for (let i = 0; i < pages.length; i++) {
-                pages[i].style.display = 'none';
-            }
-            document.getElementById(page).style.display = 'flex';
-        }
-    </script>
-
+    </nav>
+    <section></section> 
 </body>
 </html>
