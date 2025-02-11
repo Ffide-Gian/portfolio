@@ -2,28 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Font Awesome 5 -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Responsive Navbar</title>
+    <title>Navigation Menu Example</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navigation menu styling */
+        nav {
+            background-color: #3498db; /* Navbar background color */
+            padding: 10px 20px;
+            position: fixed; /* Fix the navbar to the top */
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around; /* Even spacing for menu items */
+            z-index: 1000; /* Ensure it stays on top */
+        }
+
+        nav a {
+            color: white; /* Link text color */
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Hover effect */
+        nav a:hover {
+            background-color: #2980b9; /* Change background color on hover */
+            border-radius: 5px; /* Round the corners */
+        }
+
+        /* Content section to push the page down from the fixed navbar */
+        .content {
+            margin-top: 60px; /* Create space under the fixed nav */
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Navigation bar -->
     <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="check-btn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <label class="logo">DesignX</label>
-        <ul>
-            <li><a class="active" href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Feedback</a></li>
-        </ul>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
     </nav>
-    <section></section> 
+
+    <!-- Content section -->
+    <div class="content">
+        <h1>Welcome to the Home Page</h1>
+        <p>This is the main content of the Home page. Navigate using the menu above.</p>
+    </div>
+
 </body>
 </html>
